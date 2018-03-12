@@ -1,0 +1,272 @@
+﻿@model WitProApp.Models.Case
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create New Case</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+      
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <!-- =======   CASE INFO ===========-->
+        <div class="container">
+            <h3>Case Info</h3>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.NYPTICaseNumber, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.NYPTICaseNumber, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.NYPTICaseNumber, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Employee.FullName, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.DropDownList("EmployeeID", null, string.Empty, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.EmployeeID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.InitialContactDate, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.InitialContactDate, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                            @Html.ValidationMessageFor(model => model.InitialContactDate, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CountyCaseNumber, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.CountyCaseNumber, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CountyCaseNumber, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.County.CountyName, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.DropDownList("CountyID", null, string.Empty, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CountyID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Contact.FullName, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            <select class="form-control" id="ContactID" name="ContactID"></select>
+                            @*@Html.DropDownList("ContactID", null, string.Empty, htmlAttributes: new { @class = "form-control" })*@
+                            @Html.ValidationMessageFor(model => model.ContactID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <!-- =======   Additional Case Info ===========-->
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CaseType.DisplayName, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.DropDownList("CaseTypeID", null, string.Empty, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CaseTypeID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Charge.DisplayName, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.DropDownList("ChargeID", null, string.Empty, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.ChargeID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.FactsOfCase, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.FactsOfCase, new { htmlAttributes = new { @class = "form-control", placeholder = "Add details like the underlying crime and the nature of the threats" } })
+                            @Html.ValidationMessageFor(model => model.FactsOfCase, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ApprovalStatus.DisplayName, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.DropDownList("ApprovalStatusID", null, string.Empty, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.ApprovalStatusID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.StatusReason.DisplayName, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.DropDownList("StatusReasonID", null, string.Empty, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.StatusReason, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.StatusReasonOther, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.StatusReasonOther, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.StatusReasonOther, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CaseStage.DisplayName, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.DropDownList("CaseStageID", null, string.Empty, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CaseStageID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ThreatType.DisplayName, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.DropDownList("ThreatTypeID", null, string.Empty, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.ThreatTypeID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ThreatBeganDate, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.ThreatBeganDate, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.ThreatBeganDate, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ThreatCharge.DisplayName, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.DropDownList("ThreatChargeID", null, string.Empty, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.ThreatChargeID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CaseNotes, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.CaseNotes, new { htmlAttributes = new { @class = "form-control", placeholder = "Add any other information, reminders, etc. here" } })
+                            @Html.ValidationMessageFor(model => model.CaseNotes, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <!-- =======   FUNDS FOR THE PROTECTION OF ======-->
+            <h3>Funds for the Protection Of</h3>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.NumAdultsMale, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.NumAdultsMale, new { htmlAttributes = new { @class = "form-control smallInput" } })
+                            @Html.ValidationMessageFor(model => model.NumAdultsMale, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.NumAdultsFemale, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.NumAdultsFemale, new { htmlAttributes = new { @class = "form-control smallInput" } })
+                            @Html.ValidationMessageFor(model => model.NumAdultsFemale, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.NumChildren, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.NumChildren, new { htmlAttributes = new { @class = "form-control smallInput" } })
+                            @Html.ValidationMessageFor(model => model.NumChildren, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.SpecialNeedsYN, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.SpecialNeedsYN, new { htmlAttributes = new { @class = "form-control checkBox" } })
+                            @Html.ValidationMessageFor(model => model.SpecialNeedsYN, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Plan, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.Plan, new { htmlAttributes = new { @class = "form-control", placeholder = "Details about how the funds will be used to keep the witness(es) safe" } })
+                            @Html.ValidationMessageFor(model => model.Plan, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.FundsPurposeNotes, htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-8">
+                            @Html.EditorFor(model => model.FundsPurposeNotes, new { htmlAttributes = new { @class = "form-control", placeholder = "Notes about the who the funds are for, their relationships, etc." } })
+                            @Html.ValidationMessageFor(model => model.FundsPurposeNotes, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+                <h3>Financial</h3>
+                <!-- =======   FINANCIAL ===========-->
+                <!-- =======   DISPERSALS ===========-->
+                <div class="row dispersalGrid">
+                    <h3>Click 'Create', then you can add Financial Information like dispersals</h3>
+                </div>
+        <div>
+            <div class="btnDiv">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                @Html.ActionLink("Back to Case List", "Index", null, new { @class = "btn btn-primary btn-sm cancelBtn" })
+            </div>
+
+        </div>
+
+    </div>
+}
+@section Scripts {
+
+<script>
+         $(function () {
+             $(".datepicker").datepicker();
+
+             //begin
+
+             $("#ContactID").prop("disabled", true);
+
+             $("#CountyID").change(function () {
+                 $("#ContactID").empty();
+                 var CountyID = $("#CountyID").val();
+                 $.post("/Cases/GetContacts", { countyID: CountyID }, function (data,status) {
+                         if (status == "success") {
+                             if (data.length == 0) {
+                                 $("#ContactID").append("<option value='0'>-this county has no contacts-</option>");
+                                 $("#ContactID").prop("disabled", true);
+                             }
+                             else if (data.length > 0) {
+                                 $("#ContactID").append("<option value=>-please select-</option>");
+                                 for (var i = 0; i < data.length; i++) {
+                                     $("#ContactID").append("<option value='" + data[i].ContactID + "'>" + data[i].FullName + "</option>");
+                                 }
+                                 $("#ContactID").prop("disabled", false);
+                             }
+                             else {
+                                 $("#ContactID").append("<option value='0'>-List Empty-</option>");
+                                 alert("Something went wrong getting the contact list. Please see NYPTI IT team.")
+                             }
+                         }
+                         else {
+                             $("#ContactID").append("<option value='0'>-List Empty-</option>");
+                             alert("Something went wrong getting the contact list. Please see NYPTI IT team.")
+                         }
+
+                     }, "json");
+             });
+             //end
+
+         });
+</script>
+
+}
+

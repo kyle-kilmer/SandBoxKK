@@ -1,0 +1,185 @@
+﻿@model WitProApp.Models.Case
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Case</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ApprovalStatus.DisplayName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApprovalStatus.DisplayName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaseStage.DisplayName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaseStage.DisplayName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contact.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThreatCharge.DisplayName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThreatCharge.DisplayName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThreatType.DisplayName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThreatType.DisplayName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NYPTICaseNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NYPTICaseNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CountyCaseNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CountyCaseNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InitialContactDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InitialContactDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChargeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChargeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaseTypeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaseTypeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThreatBeganDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThreatBeganDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FactsOfCase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FactsOfCase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusReason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusReason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClosingLetterReceivedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClosingLetterReceivedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaseDisposition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaseDisposition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WitnessThreatsInDispo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WitnessThreatsInDispo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateFinalTallyReturned)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateFinalTallyReturned)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaseNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaseNotes)
+        </dd>
+
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,37 @@
+﻿body { 
+  color : #000000; 
+  background : #ffffff; 
+  font-family : "Times New Roman", Times, serif;
+  font-size : 12pt; 
+  margin-left:auto;
+  margin-right:auto;
+  }
+#navigation, #advertising, #other, #Buttons, #PrinterBanner, #PrinterButtons { 
+  display : none; 
+} 
+
+.HeaderDivMobile{
+    display:none;
+    }
+
+div#navDiv {
+       display:none;
+}
+
+.nyptiButton
+{
+       display:none;
+}
+
+div.ui-state-highlight
+{
+    display:none;
+}
+
+
+#Answers, .disclaimerDiv 
+{
+width:600px;
+margin-left:auto;
+margin-right:auto;	
+}

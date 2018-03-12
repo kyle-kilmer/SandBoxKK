@@ -1,0 +1,141 @@
+﻿@model IEnumerable<WitProApp.ViewModels.ReportingVM>
+
+<h2>Reports</h2>
+<div class="reports">
+    <div class="well alert-info">
+        <p>The numbers below are based on <strong>approved amounts</strong> only.</p>
+        <p>The date range is based on the <strong>initial contact date.</strong></p>
+    </div>
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.Label("Display records from")
+                </div>
+                <div class="col-md-3">
+                    @*make required / validated*@
+                    @Html.TextBox("dateStart", null, htmlAttributes: new { @class = "form-control datepicker" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.Label("to")
+                </div>
+                <div class="col-md-3">
+                    @Html.TextBox("dateEnd", null, htmlAttributes: new { @class = "form-control datepicker" })
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <input type="submit" value="Refresh Report" class="btn btn-primary" />
+                </div>
+            </div>
+
+        </div>
+    }
+        <h4> Showing results for @ViewBag.dateStart to @ViewBag.dateEnd</h4>
+
+        @*summary*@
+        <h3>Summary</h3>
+        <table class="table table-bordered table-condensed" id="summaryTable">
+            <tr class="tblHeader">
+                <th class="text-center">
+                    @Html.Label("Group")
+                </th>
+                <th class="text-center">
+                    @Html.Label("Number of Cases")
+                </th>
+                <th class="text-right">
+                    @Html.Label("Amount")
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Metro 8")
+                </td>
+                <td class="text-center">
+                    @ViewBag.metro8Cases
+                </td>
+                <td class="text-right">
+                    $@ViewBag.metro8Contributions
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Non-Metro 8")
+                </td>
+                <td class="text-center">
+                    @ViewBag.nonMetro8Cases
+                </td>
+                <td class="text-right">
+                    $@ViewBag.nonMetro8Contributions
+                </td>
+            </tr>
+            <tr class="subtotal">
+                <td>
+                    @Html.Label("All")
+                </td>
+                <td class="text-center">
+                    @(@ViewBag.metro8Cases + @ViewBag.nonMetro8Cases)
+                </td>
+                <td class="text-right">
+                    $@(@ViewBag.metro8Contributions + @ViewBag.nonMetro8Contributions)
+                </td>
+            </tr>
+        </table>
+
+        <br />
+        @*details*@
+        <h3>Details</h3>
+        <table class="table table-bordered table-condensed" id="detailsTable">
+            <tr class="tblHeader">
+                <th class="text-center">
+                    @Html.Label("County")
+                </th>
+                <th class="text-center">
+                    @Html.Label("Metro 8")
+                </th>
+                <th class="text-center">
+                    @Html.Label("Number of Cases")
+                <th class="text-right">
+                    @Html.Label("Amount")
+                </th>
+            </tr>
+
+            @{
+                foreach (var county in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.Label(county.CountyName)
+                        </td>
+                        <td class="text-center">
+                            @if (county.MetroYN == true)
+                            {
+                                <span>M8</span>
+                            }
+                        </td>
+                        <td class="text-center">
+                            <span>@county.Cases.Count().ToString()</span>  @*number of cases, not disbursements *@
+                        </td>
+                        <td class="text-right">
+                            @{
+                                decimal? sum = 0;
+                                foreach (var disp in county.Dispersals)
+                                {
+                                    sum += disp.AmountApproved;
+                                }
+
+                                <span>$</span>@sum;
+                            }
+
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    @Html.ActionLink("See all cases and dispersals in Excel", "ExportToExcel")
+    </div>
+

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WitProApp", "WitProApp\WitProApp.csproj", "{C492FB7A-3DB2-4CAC-AEC1-51EF50623E0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Local|Any CPU = Local|Any CPU
+		Production|Any CPU = Production|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Test|Any CPU = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C492FB7A-3DB2-4CAC-AEC1-51EF50623E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C492FB7A-3DB2-4CAC-AEC1-51EF50623E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C492FB7A-3DB2-4CAC-AEC1-51EF50623E0A}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{C492FB7A-3DB2-4CAC-AEC1-51EF50623E0A}.Local|Any CPU.Build.0 = Local|Any CPU
+		{C492FB7A-3DB2-4CAC-AEC1-51EF50623E0A}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{C492FB7A-3DB2-4CAC-AEC1-51EF50623E0A}.Production|Any CPU.Build.0 = Production|Any CPU
+		{C492FB7A-3DB2-4CAC-AEC1-51EF50623E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C492FB7A-3DB2-4CAC-AEC1-51EF50623E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C492FB7A-3DB2-4CAC-AEC1-51EF50623E0A}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{C492FB7A-3DB2-4CAC-AEC1-51EF50623E0A}.Test|Any CPU.Build.0 = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3CA2AA9F-BF2B-4B1E-A813-D50E9A33784E}
+	EndGlobalSection
+EndGlobal

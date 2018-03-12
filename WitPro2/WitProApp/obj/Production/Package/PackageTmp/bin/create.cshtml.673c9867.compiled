@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="2" virtualPath="/Views/Contacts/Create.cshtml" hash="ffffffff903870fa" filehash="ffffdef75d7b9597" flags="110000" assembly="App_Web_md4da4nq" type="ASP._Page_Views_Contacts_Create_cshtml">
+    <filedeps>
+        <filedep name="/Views/Contacts/Create.cshtml" />
+    </filedeps>
+</preserve>

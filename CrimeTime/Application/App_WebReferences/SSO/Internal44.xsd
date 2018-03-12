@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/NYPTI.SSO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NYPTI.SSO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://kylekilmerpc.nypti.org/Internal.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="Account">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APIAccount" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Agency" nillable="true" type="tns:Agency" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="County" nillable="true" type="tns:County" />
+      <xs:element minOccurs="0" name="CustomAgency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureCount" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="FailureLocked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JobTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Middle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MonthAdmitted" nillable="true" type="tns:Month" />
+      <xs:element minOccurs="0" name="OverrideAgencyAddress" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PasswordChange" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PasswordHash" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="PasswordSalt" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="PeopleTypes" nillable="true" type="tns:ArrayOfPeopleType" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Salutation" nillable="true" type="tns:Salutation" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="tns:State" />
+      <xs:element minOccurs="0" name="Suffix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupervisorEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupervisorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupervisorPhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="YearAdmitted" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Account" nillable="true" type="tns:Account" />
+  <xs:complexType name="Agency">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CodeTableValue">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+          <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EmailDomains" nillable="true" type="q1:ArrayOfstring" />
+          <xs:element minOccurs="0" name="Loaded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Agency" nillable="true" type="tns:Agency" />
+  <xs:complexType name="CodeTableValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Literal" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CodeTableValue" nillable="true" type="tns:CodeTableValue" />
+  <xs:complexType name="County">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CodeTableValue">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="County" nillable="true" type="tns:County" />
+  <xs:complexType name="Month">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CodeTableValue">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Month" nillable="true" type="tns:Month" />
+  <xs:complexType name="ArrayOfPeopleType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PeopleType" nillable="true" type="tns:PeopleType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPeopleType" nillable="true" type="tns:ArrayOfPeopleType" />
+  <xs:complexType name="PeopleType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CodeTableValue">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PeopleType" nillable="true" type="tns:PeopleType" />
+  <xs:complexType name="Salutation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CodeTableValue">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Salutation" nillable="true" type="tns:Salutation" />
+  <xs:complexType name="State">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CodeTableValue">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="State" nillable="true" type="tns:State" />
+  <xs:complexType name="Token">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Account" nillable="true" type="tns:Account" />
+      <xs:element minOccurs="0" name="RequestData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Token" nillable="true" type="tns:Token" />
+  <xs:complexType name="ArrayOfAccessRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AccessRequest" nillable="true" type="tns:AccessRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAccessRequest" nillable="true" type="tns:ArrayOfAccessRequest" />
+  <xs:complexType name="AccessRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessRequestID" type="xs:int" />
+      <xs:element minOccurs="0" name="Account" nillable="true" type="tns:Account" />
+      <xs:element minOccurs="0" name="DateApplied" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateApproved" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateDenied" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateOfDeactivation" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DenialReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service" nillable="true" type="tns:Service" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AccessRequest" nillable="true" type="tns:AccessRequest" />
+  <xs:complexType name="Service">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllowsUnregistered" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Literal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoginEntryPoint" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequiresDeviceValidation" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ServiceID" type="xs:int" />
+      <xs:element minOccurs="0" name="SortOrder" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Service" nillable="true" type="tns:Service" />
+</xs:schema>

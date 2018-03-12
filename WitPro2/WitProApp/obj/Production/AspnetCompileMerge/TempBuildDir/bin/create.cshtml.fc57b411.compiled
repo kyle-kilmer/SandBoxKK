@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="2" virtualPath="/Views/Employees/Create.cshtml" hash="ffffffff903870fa" filehash="15297fb79e87" flags="110000" assembly="App_Web_2i3d401i" type="ASP._Page_Views_Employees_Create_cshtml">
+    <filedeps>
+        <filedep name="/Views/Employees/Create.cshtml" />
+    </filedeps>
+</preserve>

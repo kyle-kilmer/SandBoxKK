@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Witness Protection</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+
+        <div class="container">
+            <img src="~/Content/NYPTISeal-170.png" class="nyptiSeal" alt="NYPTI Seal" />
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Witness Protection Tracker", "Index", "Cases", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse pull-right">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Cases", "Index", "Cases")</li>
+                    <li>@Html.ActionLink("Reports", "Reports", "Reports")</li>
+                    <li>@Html.ActionLink("Contact List", "Index", "Contacts")</li>
+                    <li>@Html.ActionLink("NYPTI Staff List", "Index", "Employees")</li>
+                    <li>@Html.ActionLink("Grants", "Index", "GrantTypes")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+
+
+</body>
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/jquery-ui")
+@Scripts.Render("~/bundles/jqueryval")
+@RenderSection("scripts", required: false)
+
+</html>
+<script src="~/Scripts/csvExport.js"></script>
+
+<script>
+    $(function () {
+        $(".datepicker").datepicker();
+    });
+</script>
+

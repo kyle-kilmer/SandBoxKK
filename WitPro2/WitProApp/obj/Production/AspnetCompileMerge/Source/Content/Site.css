@@ -1,0 +1,155 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #f7f7f7;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/*Custom Overrides*/
+.navbar.navbar-inverse.navbar-fixed-top {
+    background-color: #003a69;
+}
+
+    .navbar.navbar-inverse.navbar-fixed-top a {
+        color: #fff;
+    }
+    .navbar.navbar-inverse.navbar-fixed-top a:hover {
+        color: aqua;
+    }
+
+.panel-default {
+    border-color: #969696;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.nyptiSeal {
+    float: left;
+    height: 45px;
+    margin-right: 10px;
+}
+
+textarea.form-control {
+    height: 7em;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    /*border-top: 1px solid #003a69;*/
+}
+
+.dispersalGrid {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+div.btnDiv {
+    width: 100%;
+    text-align: center;
+    margin-bottom:5em;
+}
+div.btnDiv > input {
+    position: fixed;
+    bottom: 5%;
+    margin-left: -3.5em;
+    box-shadow: 4px 4px 7px #888888;
+}
+
+a.cancelBtn {
+    position: fixed;
+    bottom: 5%;
+    margin-left: 29vw;
+    box-shadow: 4px 4px 7px #888888;
+    background-color: #8c959c;
+    border-color: #878788;
+}
+
+a.cancelBtn:hover {
+    background-color: #383b3e;
+}
+
+.activeFilter {
+    font-weight: 700;
+}
+
+.checkBox{
+    width:25px;
+}
+
+.smallInput {
+    width: 100px;
+}
+
+/*~~~~~~~~~~~~~~Report Page~~~~~~~~~~~~~~*/
+div.reports {
+    max-width: 700px;
+}
+
+
+tr.tblHeader {
+    background: #d3d4d8;
+}
+
+.subtotal {
+    border-top: solid 2px #bfbfbf;
+}
+
+.table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+    border: solid 1px #abaaaa;
+}
+
+/*~~~~~~~~End of Report Page~~~~~~~~~~~~~~*/
+
+
+/*~~~~~~~~~~~~~~User Message~~~~~~~~~~~~~~*/
+div#UserMessage {
+    position: absolute;
+    z-index: 101;
+    top: 51px;
+    left: 0;
+    right: 0;
+    background: #dee7ff;
+    text-align: center;
+    line-height: 2.5;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 5px black;
+    -moz-box-shadow: 0 0 5px black;
+    box-shadow: 0 0 5px black;
+}
+/*~~~~~~~~~~~End of User Message~~~~~~~~~~*/
+
+/*~~~~~~~~~~~Attachments Page~~~~~~~~~~~~*/
+.chooseFileForm {
+    margin: 20px;
+    
+}
+.chooseFileForm>input {
+    display:inline;
+}
+
+
+/*~~~~~~~~End Attachments Page~~~~~~~~~~~~*/

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a2a40f62-7f54-458e-999d-e5eea8f3fa23" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://sso-test/Internal.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Internal4.xsd" MetadataType="Schema" ID="43d3cfcf-5f76-4244-9542-f5d050aba67d" SourceId="1" SourceUrl="https://kylekilmerpc.nypti.org/Internal.svc?xsd=xsd1" />
+    <MetadataFile FileName="Internal1.disco" MetadataType="Disco" ID="a715f92b-f971-4063-bdbd-c22a00549263" SourceId="1" SourceUrl="https://kylekilmerpc.nypti.org/Internal.svc?disco" />
+    <MetadataFile FileName="Internal1.wsdl" MetadataType="Wsdl" ID="dd05d056-ab00-436f-a7b1-1cefdbce1a43" SourceId="1" SourceUrl="https://kylekilmerpc.nypti.org/Internal.svc?wsdl" />
+    <MetadataFile FileName="Internal42.xsd" MetadataType="Schema" ID="10266dd7-d1ab-47ca-afb6-a7640bb54182" SourceId="1" SourceUrl="https://kylekilmerpc.nypti.org/Internal.svc?xsd=xsd0" />
+    <MetadataFile FileName="Internal43.xsd" MetadataType="Schema" ID="9a033ab9-bed7-421d-9e92-93cdedafa819" SourceId="1" SourceUrl="https://kylekilmerpc.nypti.org/Internal.svc?xsd=xsd3" />
+    <MetadataFile FileName="Internal44.xsd" MetadataType="Schema" ID="8d7519c8-5558-4f8c-8f7f-d4ba1ab59928" SourceId="1" SourceUrl="https://kylekilmerpc.nypti.org/Internal.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

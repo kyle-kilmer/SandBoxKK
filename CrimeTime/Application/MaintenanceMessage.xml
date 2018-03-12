@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <displayStartDateTime>01/01/2013 01:01:00</displayStartDateTime> <!--Format: MM/DD/YYYY HH:MM:SS -->
+    <displayEndDateTime>01/02/2013 01:01:00</displayEndDateTime>   <!--Format:  MM/DD/YYYY HH:MM:SS -->
+    <message>This site will be down from approximately ____ to ____ for maintenance.  We apologize for any inconvenience.</message>
+</configuration>
+

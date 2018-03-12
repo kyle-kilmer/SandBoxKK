@@ -1,0 +1,82 @@
+﻿@model IEnumerable<WitProApp.Models.Case>
+
+<h2>Recent Cases</h2>
+<div class="pull-right"> 
+    <span class="@(@ViewBag.ShowLast6Months == true ? "activeFilter" : "")">@Html.ActionLink("Show cases from Last 6 months", "Index", new { recentMonthsFilter = 6 })</span> |
+    <span class="@(@ViewBag.ShowLast6Months == false ? "activeFilter" : "")">@Html.ActionLink("Show All", "Index", new { recentMonthsFilter = 240 })</span>
+</div>
+<p>
+    @Html.ActionLink("Create New Case", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Int. Contact
+        </th>
+        <th>
+            NYPTI Case #
+        </th>
+        <th>
+            County Case #
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CaseStageID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact.County.CountyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CaseTypeID)            
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>
+                @Html.DisplayFor(modelItem => item.InitialContactDate)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.NYPTICaseNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountyCaseNumber)
+            </td>
+            <td>
+                @{ 
+                    var caseStages = item.CaseStage?.Select(c => c.CaseStage.DisplayName).ToList();
+                    var caesStageStr = string.Join(",", caseStages);
+                }
+                @Html.Raw(caesStageStr)                
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.County.CountyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contact.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employee.FullName)
+            </td>
+            <td>
+                @{ 
+                    var caseType = item.CaseType?.Select(c => c.CaseType.DisplayName).ToList();
+                    var caseTypeStr = string.Join(",", caseType);
+                }
+                @Html.Raw(caseTypeStr)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CaseID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CaseID })
+            </td>
+        </tr>
+    }
+
+</table>

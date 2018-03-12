@@ -1,0 +1,856 @@
+﻿html, body {
+    margin:0;
+    padding:0;
+}
+
+/*to remove pink border around image link*/
+a img 
+{ 
+    border:none;
+}
+
+
+/*making fonts consistant across all browsers by hiding the font while loading and making it visible only when its active*/
+
+
+.wf-loading {
+    font-family: "Playfair Display SC";
+    visibility: hidden;
+  }
+  .wf-active {
+    visibility: visible;
+  }
+
+
+
+.left {
+float: left;
+width: 500px;
+
+}
+
+/* Amazon banner
+#main {
+    float:left;
+    width:550px;
+
+}
+
+
+#amznCharityBanner {
+    float:right;
+    width:300px;
+}
+    */
+
+
+div.NavBarDiv {
+    margin-top: -8px;
+    margin-left: 50px;
+}
+.BannerCustom {
+     background: #003a68;
+               
+                
+    min-width: 1100px;
+ 
+ 
+  padding-left:0px;
+  padding-right:0px;
+}
+
+.BannerCustomSmall {
+    display: none;
+}   
+
+.BannerTitle {
+   color: #ffffff;
+  font-size: 34px;
+  height: 44px;
+               
+  margin-left: 290px;
+margin-bottom:-10px;
+margin-top:0;
+padding-bottom:7px;
+padding-top:7px;
+}
+.BannerTitleInner {
+   
+    margin-top:-9px;
+
+}
+.BannerTitle a{
+  color: white;
+   font-size: 16px;
+   
+  padding-right:10px;
+  padding-left:0px;
+
+   text-decoration: none;
+  font-family:Arial;
+  
+ 
+}
+    .BannerTitle a:hover{
+        text-decoration:underline;
+    }
+.BannerSubTitle {
+    font-size: 44px;
+                margin-left: 310px;
+                padding: 0px ;
+              vertical-align: middle;
+}
+    .BannerSubTitle a{
+        vertical-align: middle;
+    }
+
+.BannerSubTitleOuter {
+                background: #ffffff;
+                color: black;
+                font-size: 22px;
+                height: 64px;
+}
+
+
+.NYPTISealBanner {
+                margin-left: 120px;
+                position: absolute;
+                width: 170px;
+
+    
+}
+
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+}
+
+li {
+    display: inline;
+ 
+}
+
+
+
+
+
+.lcp_thumbnail{
+  float: left;
+}
+
+.lcp_catlist li{
+  clear: both;
+}
+.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+background-color: #003a68;
+}
+
+.dropdown-menu > li > a:hover {
+	background: #003a68;
+}
+
+
+.navbar-wrapper .navbar h2 {
+	display: none;
+}
+
+.open > .dropdown-menu {
+	background: #003a68;
+-webkit-box-shadow: 4px 4px 5px 1px #A6A6A6;
+box-shadow: 4px 4px 5px 1px #A6A6A6;
+}
+a.dropdown-toggle {
+	background: #003a68;
+}
+
+/* hide the credits */
+.colophon div.credits p{
+display:none;	
+}
+.tc-header .brand a {
+	display: none;
+}
+
+div.navbar-inner {
+	background: none;
+	webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+iv.navbar-wrapper.clearfix.span9 {
+	font-family: \&#039;Playfair Display SC\&#039;, serif;
+	position: relative;
+	top: -50px;
+	float: right;
+	min-width: 750px;
+}
+
+
+.navbar .nav > li > a:first-letter {
+            font-size: 17px;
+          }
+
+header.tc-header {border-top: none;
+                  width:100%;
+                    
+}
+
+.sticky-enabled .tc-shrink-on .site-logo img {
+						height:30px!important;
+                        width:auto!important;
+                      
+					}
+
+					.sticky-enabled .tc-shrink-on .brand .site-title {
+						font-size:0.6em;opacity:0.8;line-height:1.2em
+					}
+
+.tc-rectangular-thumb {
+            max-height: 250px;
+            height :250px
+          }
+
+          .single .tc-rectangular-thumb {
+            max-height: 250px;
+            height :250px
+          }
+/*
+.navbar-wrapper .navbar h2 {
+	display: none;
+}*/
+    
+.tc-header .brand a {
+	display: none;
+ 
+ 
+}
+
+
+
+li.menu-item.menu-item-type-post_type.menu-item-object-page a {
+		padding: 5px 8px 5px 8px;
+	}
+li.menu-item.menu-item-type-post_type.menu-item-object-page a:hover {
+	border-top: solid 1px #ffffff;
+	border-bottom: solid 1px #ffffff;
+}
+
+
+/*/div.entry-meta{display:none;} /* hide the written by information */
+
+#nav-below{display:none;} /* hide the lower post navigation section */
+
+.brand {
+	display: none;
+}
+
+
+
+.tc-header {
+	min-height:170px;
+   
+    background:#fff;
+   border-bottom:10px solid #e9eaee; 
+}
+
+.entry-content table{
+	border:gray 2px solid;	
+}
+
+/*div.tc-hot-crumble.container {
+	display: none;
+}*/
+header.archive-header>h1.format-icon {
+	display:none;
+}
+
+ul.page-numbers {
+	margin: 20px 0 10px;
+	width: 100%;
+	padding: 0;
+	font-size: 12px;
+	line-height: normal;
+	clear: both;
+	float: left;
+	}
+
+clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+  
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+
+nav {
+	height: 40px;
+	width: 100%;
+	background:#003a68;
+	font-size: 11pt;
+	font-family: 'PT Sans', Arial, sans-serif;
+	font-weight: bold;
+	position: relative;
+	border-bottom: 2px solid #283744;
+    z-index:1001;
+
+
+}
+
+nav ul {
+	padding: 0;
+	margin: 0 auto;
+/*width: 600px;*/
+	height: 40px;
+    text-align: center;
+}
+
+
+
+nav a {
+	color: #fff;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	line-height: 40px;
+	text-shadow: 1px 1px 0px #283744;
+}
+
+
+
+nav a:hover, nav a:active {
+
+    text-decoration:underline;
+}
+@media screen and (max-width: 650px) {
+
+                .BannerCustom {
+                                display: none;
+                               
+                }
+
+                .BannerCustomSmall {
+                                display: block;
+                                background: #003a68;
+                                margin-top: 0px;
+                                font-size: X-Large;
+                                color: white;
+                                font-family: "Playfair Display SC", serif;
+                                text-align: center;
+                                height: 70px;
+                                line-height: 100%;
+                               
+                               margin-bottom:-2px;
+                               padding-bottom: 3px;
+                }
+
+             
+
+    .BannerCustomSmall a {
+
+        text-align:left;
+    }
+
+  
+
+
+nav {
+		border-bottom: 0;
+    
+	}
+	nav ul {
+		display: none;
+		height: auto;
+    text-align:center;
+     
+	}
+	nav a#pull {
+		display: block;
+		background-color:#003a68;
+		text-align:center;
+        width:100%;
+		position: relative;
+         
+	}
+	nav a#pull:after {
+		content:"";
+		background: url('nav-icon.png') no-repeat;
+		width: 30px;
+		height: 30px;
+		display: block;
+		position: absolute;
+		right: 15px;
+		top: 10px;
+        
+	}
+
+    nav li {
+	display: block;
+    background: #003a68;
+    text-align:center;
+	
+}
+        nav li a{
+            text-align:center;
+        }
+    nav a#pull {
+	background-color:#002953;
+    
+    border-top:thin;
+ 
+   border-top-color:lightgray;
+   /* border-bottom-color:lightgray;*/
+   
+    border-top-style:groove;
+    /* border-bottom-style:groove;*/
+ height:43px;
+   /* background:#003a68;*/
+}
+    .clearfix a{
+        text-align:center;
+    }
+
+   
+    
+    .tc-header {
+	min-height:45px;
+   
+    background:#fff;
+   border-bottom:10px solid #e9eaee; 
+}
+     nav.clearfix {
+     margin-top:4px;
+         
+    }
+   
+}/*end max 650*/
+
+ 
+@media screen and (max-width: 550px) {
+    .BannerCustomSmall {
+       /* margin-bottom: -10px;*/
+        padding-bottom: 26px;
+    }
+
+    .tc-header {
+	min-height:45px;
+   
+}
+     nav.clearfix {
+     margin-top:4px;
+         
+    }
+}
+  @media screen and ( max-width: 308px) {
+   
+      .BannerCustomSmall {
+       /* margin-bottom: -10px;*/
+        padding-bottom: 49px;
+    }
+
+
+    nav a {
+       margin-top: -2px;
+      /*  padding-bottom: 15px;*/   
+    }
+    
+  nav a#pull {
+		
+        width:100%;
+        height:43px;
+        text-align:center;
+       padding-top: 0px;
+        
+	}
+  
+
+	nav a#pull:after {
+		content:"";
+		background: url('nav-icon.png') no-repeat;
+		width: 30px;
+		height: 43px;
+		display: block;
+		position: absolute;
+		right: 15px;
+		/*top: 10px;*/
+        padding-top: 0px;
+        padding-bottom: 5px;
+	}
+   
+    nav.clearfix {
+      height:43px;
+     background:#002953;
+     margin-top:6px;
+        
+    }
+
+     .tc-header {
+	min-height:45px;
+   
+}
+
+}/*end max 310*/
+
+
+@media screen and (max-width: 253px) {
+    .BannerCustomSmall {
+       /* margin-bottom: -10px;*/
+        padding-bottom: 74px;
+    }
+
+     .tc-header {
+	min-height:45px;
+   
+}
+
+     nav.clearfix {
+        margin-top: 6px;
+    }
+
+}/*end max 254*/
+
+/**************END*************/
+
+body
+{
+    font-family: Helvetica, Serif;
+   background-color:white; 
+}
+
+#NYPTILogo
+{
+    Height:106px; 
+    Width:640px;
+}
+.center
+{
+ margin-left:auto;
+ margin-right:auto;   
+}
+#SearchDiv
+{
+    width:600px;
+    margin-top: 5px;
+}
+#SearchCriteria
+{
+    width:80%;
+}
+
+.msgDiv
+{
+    padding:10px;
+    border:2px solid #366792;
+    background:#ececec;
+}
+.shadow
+{
+    box-shadow: 8px 8px 15px #ccc;
+}
+.navigatorlist
+{
+    width: 612px;
+    margin-bottom:12px;
+
+}
+.lawFilterTab
+{
+    float:left;
+    padding-top: 4px;
+    text-decoration: none;
+    padding-left: 8px;
+    padding-right: 8px;
+        
+}
+
+.HeaderDiv
+{
+    background-color: #336699;    
+    box-shadow: 8px 8px 15px #ccc;
+    margin-left: auto;
+    margin-right: auto;
+    width: 715px; /*850 */
+    font-family: Helvetica, Serif;
+    font-size: 28px;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    border-color: #D3DDE8;
+    border-style: solid;
+    border-collapse: separate;
+    border-width: 1px;
+    border-spacing: 15px;
+    padding: 8px;
+}
+.HeaderDivMobile
+{
+    display:none;
+}
+.disclaimerDiv
+{
+ font-size: 0.8em; 
+ background-color:White; 
+ width:600px; 
+ padding:3px; 
+ border: 1px solid #336699;  
+ box-shadow: 8px 8px 15px #ccc; 
+ margin-bottom:6px;
+
+}
+
+.MainDiv
+{
+    border:1px solid #336699; 
+    background:white; 
+    padding: 6px;
+    box-shadow: 8px 8px 15px #ccc;
+    width:75%;
+    margin-top:6px;
+}
+
+.ParagraphTextDiv
+{
+    border:1px solid #336699; 
+    background: #E3ECF5; 
+    padding: 6px;
+    box-shadow: 8px 8px 15px #808080;
+    width:75%;
+    margin-top:6px;
+}
+
+.FooterDiv
+{
+    background-color: #336699; 
+    box-shadow: 8px 8px 15px #ccc;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px; /*850 */
+    font-family: Helvetica, Serif;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    border-color: #D3DDE8;
+    border-style: solid;
+    border-collapse: separate;
+    border-width: 1px;
+    border-spacing: 15px;
+    padding: 8px;
+}
+.centered
+{
+	text-align:center;
+}
+
+.nyptiLink
+{
+ height: 20px; 
+ padding: .1em 1em !important; 
+ overflow: hidden;
+}
+
+#navDiv
+{
+    text-align: center;
+    width: auto;
+    margin-left:auto;
+    margin-right:auto;
+    overflow: hidden;
+}
+.input.ui-button
+{
+font-size: medium;
+color: lightgray;
+}
+/*-----Responsive Settings-----------*/
+
+@media screen and (max-width: 801px) 
+{
+   body
+        {
+           background-image:none;  
+        }
+
+        .msgDiv
+        {
+            padding:6px;
+            box-shadow: none;
+            border:2px solid #366792;
+            background:#ececec;
+            
+        }
+        .HeaderDiv
+        {
+            display:none;
+        }
+        
+        .HeaderDivMobile
+        {
+            display:inline;
+            margin-top: -18px;
+            margin-bottom: -15px;
+            width:105%;
+            border-spacing: 0px;
+            padding: 1px;
+        }
+        #NYPTILogoMobile
+        {
+            Height:auto; 
+            Width: 108%;
+            margin-left: -12px;
+            margin-top: -12px;
+        }
+        .disclaimerDiv
+        {
+         font-size: x-small; 
+         background-color:White; 
+         box-shadow: none;
+         min-width:0px;
+         width:102%;
+     /*    margin-left:-8px; */
+         padding:3px; 
+         border: 1px solid #336699; 
+         }
+
+        .MainDiv
+        {
+            border:1px solid #336699; 
+            background:white; 
+            box-shadow: none;
+            padding: 3px;
+            width:102%;
+        /*    margin-left:-8px; */
+        }
+
+        .FooterDiv
+        {
+            background-color: #336699; 
+            box-shadow: none;
+            font-size: x-small;
+            text-align: center;
+            padding: 5px;
+            width:101%;
+         /*   margin-left:-8px; */
+        }
+        #navDiv
+        {
+            float:none;
+            text-align: center;
+            width:75%;
+            margin-top: 5px;
+            margin-bottom: -12px;
+         }
+        .navigatorlist
+        {
+            width:100%;
+        }
+        #SearchDiv
+        {
+            width: 98%;
+       /*     margin-left: -4px; */
+        }
+        
+        .textBox
+        {
+            font-size: x-large;
+        }
+        .nyptiButton
+        {
+            font-size: larger;
+        }
+
+        .nyptiDropdown
+        {
+            font-size: larger;
+        }
+        .hideForMobile
+        {
+            display: none;
+        }
+}
+/* Grid Style  */
+.mGrid
+{
+    width: 98%;
+    margin: 5px 0 10px 0;
+    border: solid 1px #525252;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    text-align: left;
+    margin-left:auto;
+    margin-right:auto;
+    float: left;
+    color: #000000;
+}
+.mGrid a
+{
+    color: #336699;
+}
+.mGrid td
+{
+    padding: 2px;
+    border: solid 1px #c1c1c1;
+}
+.mGrid th
+{
+    padding: 4px 2px;
+    color: #ffffff;
+    background: #7F9BB6;
+    font-size: 0.9em;
+    text-align: center;
+}
+.mGrid .alter
+{
+    background: #DEE0E2;
+}
+.mGrid .tfoot
+{
+    padding: 4px 2px;
+    background: #336699;
+    color: #ffffff;
+    font-size: 0.9em;
+}
+
+.GridTable
+{
+    /*  border: 1px solid #1131AD;   */
+    border-spacing: 3px;
+    background-color: #C5DFFC /*light blue */ /* background-color: #DBDBDB */ /*grey */;
+}
+
+.catGrid {
+
+    text-align: left;
+    font-size: larger;
+    width: 98%;
+    color:#5C5353;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.nyptiButtonSet .ui-button {
+    color: #766C6C;
+    background: #C3C1C1;
+    border-color: #766C6C;
+}
+.nyptiButtonSet .ui-state-active { 
+    background: #336699 url("images/ui-bg_diagonals-small_35_e3e9ef_40x40.png") 50% 50% repeat; 
+    color: white;
+    border-color: black;
+}
+.Link {
+    color:lightgray;
+}
+
+
+
